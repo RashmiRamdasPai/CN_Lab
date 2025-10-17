@@ -6,7 +6,7 @@ public class bellman{
                 int n;
                 System.out.print("Enter the number of vertices:");
                 n=sc.nextInt();
-                System.out.println("Enter the weight matrix of the graph use 0 or 1:");
+                System.out.println("Enter the weight matrix of the graph use 0 for no edges:");
                 int[][] graph=new int[n][n];
                 for(int i=0;i<n;i++)
                    for(int j=0;j<n;j++)
