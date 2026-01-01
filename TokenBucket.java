@@ -9,6 +9,8 @@ public class TokenBucket {
 
         System.out.println("Enter the token generation rate:");
         int tokenRate = sc.nextInt();
+        System.out.println("Enter the output rate");
+        int outputrate=sc.nextInt();
 
         System.out.println("Enter the number of packets:");
         int n = sc.nextInt();
@@ -33,7 +35,7 @@ public class TokenBucket {
             int tokensBefore = tokens;
             int tokensAfter;
 
-            if (pkt <= tokens) {
+            if (pkt <= tokens && pkt<=outputrate) {
                 // Packet is transmitted
                 tokens -= pkt;
                 tokensAfter = tokens;
